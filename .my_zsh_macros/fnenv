@@ -1,0 +1,6 @@
+__fnenv(){
+    rm -rf .venv/
+    nenv
+}
+
+__fnenv

@@ -1,0 +1,14 @@
+__nenv(){
+    if [ -d .venv/ ]
+    then 
+        echo ".venv already exists"
+        source .venv/bin/activate
+    else
+        python3 -m virtualenv .venv
+        source .venv/bin/activate
+	    pip install --upgrade "pip==20.0.2"
+        pip install black ipython
+    fi
+}
+
+__nenv
