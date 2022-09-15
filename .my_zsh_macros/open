@@ -1,0 +1,13 @@
+
+# Function for opening file explorer on ubuntu.
+# Arguments: dir path (optional) -> default to current directory
+__open(){
+    if [ $# -gt 0 ]
+    then
+        nautilus --browser $@
+    else
+        nautilus --browser $(pwd)
+    fi
+}
+
+__open $@
